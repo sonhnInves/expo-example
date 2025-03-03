@@ -17,7 +17,7 @@ const AppBar: React.FC<AppBarProps> = ({title, isBackButton, isActionRight, acti
     return (<View style={styles.row}>
         {isBackButton ? <IconSymbol name={'arrow.left'} color={Colors.light.text} onPress={() => router.back()}/> :
             <View/>}
-        <ThemedText type={'subtitle'} lightColor={Colors.light.text}>{title}</ThemedText>
+        <ThemedText type={'title'} lightColor={Colors.light.text}>{title}</ThemedText>
         {isActionRight ? actionRight : <View/>}
     </View>)
 }
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     row: {
         width: '100%',
         marginTop: marginTopApp(),
+        marginBottom: 10,
         flexDirection: 'row',
         justifyContent: 'space-between',
     }

@@ -17,3 +17,10 @@ export const marginTopApp = () => {
     }
     return 12;
 }
+export const randomRGB = () => {              //Color Generation Function
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+
+    return `rgb(${red}, ${green}, ${blue})`;
+}
